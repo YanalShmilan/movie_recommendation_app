@@ -1,4 +1,3 @@
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
 import 'package:movie_recommendation_app/features/movie_flow/genre/genre.dart';
@@ -39,14 +38,5 @@ class MovieFlowState {
   @override
   String toString() {
     return 'MovieFlowState(pageController: $pageController, rating: $rating, yearsBack: $yearsBack, genres: $genres, movie: $movie)';
-  }
-
-  @override
-  int get hashCode {
-    return pageController.hashCode ^
-        rating.hashCode ^
-        yearsBack.hashCode ^
-        genres.hashCode ^
-        movie.hashCode;
   }
 }

@@ -84,7 +84,6 @@ class ResultScreen extends ConsumerWidget {
 }
 
 class MovieImageDetails extends StatelessWidget {
-  @override
   final Movie movie;
   final double movieHeight;
 

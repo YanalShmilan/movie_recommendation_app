@@ -54,7 +54,6 @@ class GenreScreen extends ConsumerWidget {
                           itemCount: genres.length);
                     },
                     error: (error, s) {
-                      print(error);
                       if (error is Failure) {
                         return FailureBody(message: error.message);
                       }

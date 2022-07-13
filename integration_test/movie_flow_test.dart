@@ -16,7 +16,7 @@ void main() {
         overrides: [
           movieRepositoryProvider.overrideWithValue(StubMovieRepository())
         ],
-        child: MyApp(),
+        child: const MyApp(),
       ),
     );
 
@@ -38,7 +38,7 @@ void main() {
         overrides: [
           movieRepositoryProvider.overrideWithValue(StubMovieRepository())
         ],
-        child: MyApp(),
+        child: const MyApp(),
       ),
     );
 
