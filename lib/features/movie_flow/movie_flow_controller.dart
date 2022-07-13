@@ -1,8 +1,8 @@
 import 'package:flutter/cupertino.dart';
-import 'package:movie_recommendation_app_course/features/movie_flow/genre/genre.dart';
-import 'package:movie_recommendation_app_course/features/movie_flow/movie_flow_state.dart';
-import 'package:movie_recommendation_app_course/features/movie_flow/movie_service.dart';
-import 'package:movie_recommendation_app_course/features/movie_flow/result/movie.dart';
+import 'package:movie_recommendation_app/features/movie_flow/genre/genre.dart';
+import 'package:movie_recommendation_app/features/movie_flow/movie_flow_state.dart';
+import 'package:movie_recommendation_app/features/movie_flow/movie_service.dart';
+import 'package:movie_recommendation_app/features/movie_flow/result/movie.dart';
 import 'package:riverpod/riverpod.dart';
 
 class MovieFlowController extends StateNotifier<MovieFlowState> {

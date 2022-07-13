@@ -1,22 +1,20 @@
-
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
-import 'package:movie_recommendation_app_course/features/movie_flow/genre/genre.dart';
-import 'package:movie_recommendation_app_course/features/movie_flow/result/movie.dart';
+import 'package:movie_recommendation_app/features/movie_flow/genre/genre.dart';
+import 'package:movie_recommendation_app/features/movie_flow/result/movie.dart';
 import 'package:riverpod/riverpod.dart';
-
 
 @immutable
 class MovieFlowState {
- final PageController pageController;
- final int rating;
- final int yearsBack;
+  final PageController pageController;
+  final int rating;
+  final int yearsBack;
   final AsyncValue<List<Genre>> genres;
   final AsyncValue<Movie> movie;
   const MovieFlowState({
     required this.pageController,
-    this.rating =5 ,
+    this.rating = 5,
     this.yearsBack = 10,
     required this.genres,
     required this.movie,
@@ -46,15 +44,9 @@ class MovieFlowState {
   @override
   int get hashCode {
     return pageController.hashCode ^
-      rating.hashCode ^
-      yearsBack.hashCode ^
-      genres.hashCode ^
-      movie.hashCode;
-  }
-
-  @override
-  bool operator ==(Object other) {
-    // TODO: implement ==
-    return super == other;
+        rating.hashCode ^
+        yearsBack.hashCode ^
+        genres.hashCode ^
+        movie.hashCode;
   }
 }

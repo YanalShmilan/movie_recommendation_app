@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:movie_recommendation_app_course/core/widgets/failure_body.dart';
+import 'package:movie_recommendation_app/core/widgets/failure_body.dart';
 
 class FailureScreen extends StatelessWidget {
   const FailureScreen({

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:movie_recommendation_app_course/core/constants.dart';
-import 'package:movie_recommendation_app_course/features/movie_flow/genre/genre.dart';
+import 'package:movie_recommendation_app/core/constants.dart';
+import 'package:movie_recommendation_app/features/movie_flow/genre/genre.dart';
 
 class ListCard extends StatelessWidget {
   const ListCard({
@@ -16,9 +16,11 @@ class ListCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return UnconstrainedBox(
       child: Material(
-        color: genre.isSelected ? Theme.of(context).colorScheme.primary : Colors.transparent,
+        color: genre.isSelected
+            ? Theme.of(context).colorScheme.primary
+            : Colors.transparent,
         borderRadius: BorderRadius.circular(kBorderRadius),
-        child: InkWell(        
+        child: InkWell(
           borderRadius: BorderRadius.circular(kBorderRadius),
           onTap: onTap,
           child: Container(

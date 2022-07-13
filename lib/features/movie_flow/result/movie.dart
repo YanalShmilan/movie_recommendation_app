@@ -1,8 +1,7 @@
-
 import 'package:flutter/foundation.dart';
 
-import 'package:movie_recommendation_app_course/features/movie_flow/genre/genre.dart';
-import 'package:movie_recommendation_app_course/features/movie_flow/result/movie_entity.dart';
+import 'package:movie_recommendation_app/features/movie_flow/genre/genre.dart';
+import 'package:movie_recommendation_app/features/movie_flow/result/movie_entity.dart';
 
 @immutable
 class Movie {
@@ -18,11 +17,10 @@ class Movie {
     required this.overview,
     required this.voteAverage,
     required this.releaseDate,
-     this.posterPath,
-     this.backdropPath,
+    this.posterPath,
+    this.backdropPath,
     required this.genres,
   });
-
 
   Movie copyWith({
     String? title,
@@ -44,24 +42,24 @@ class Movie {
     );
   }
 
-  factory Movie.fromMovieEntity(MovieEntity entity,List<Genre> genres) {
+  factory Movie.fromMovieEntity(MovieEntity entity, List<Genre> genres) {
     return Movie(
       title: entity.title,
       overview: entity.overview,
       voteAverage: entity.voteAverage,
       releaseDate: entity.releaseDate,
       posterPath: "https://images.tmdb.org/t/p/original/${entity.posterPath}",
-      backdropPath: "https://images.tmdb.org/t/p/original/${entity.backdropPath}",
-      genres: genres.where((genre) => entity.genreIds.contains(genre.id)).toList(growable: false),
+      backdropPath:
+          "https://images.tmdb.org/t/p/original/${entity.backdropPath}",
+      genres: genres
+          .where((genre) => entity.genreIds.contains(genre.id))
+          .toList(growable: false),
     );
   }
 
   String get genresCommaSeparated {
     return genres.map((genre) => genre.name).join(', ');
   }
-
-  
-
 
   @override
   String toString() {
@@ -71,25 +69,25 @@ class Movie {
   @override
   bool operator ==(Object other) {
     if (identical(this, other)) return true;
-  
+
     return other is Movie &&
-      other.title == title &&
-      other.overview == overview &&
-      other.voteAverage == voteAverage &&
-      other.releaseDate == releaseDate &&
-      other.posterPath == posterPath &&
-      other.backdropPath == backdropPath &&
-      listEquals(other.genres, genres);
+        other.title == title &&
+        other.overview == overview &&
+        other.voteAverage == voteAverage &&
+        other.releaseDate == releaseDate &&
+        other.posterPath == posterPath &&
+        other.backdropPath == backdropPath &&
+        listEquals(other.genres, genres);
   }
 
   @override
   int get hashCode {
     return title.hashCode ^
-      overview.hashCode ^
-      voteAverage.hashCode ^
-      releaseDate.hashCode ^
-      posterPath.hashCode ^
-      backdropPath.hashCode ^
-      genres.hashCode;
+        overview.hashCode ^
+        voteAverage.hashCode ^
+        releaseDate.hashCode ^
+        posterPath.hashCode ^
+        backdropPath.hashCode ^
+        genres.hashCode;
   }
 }

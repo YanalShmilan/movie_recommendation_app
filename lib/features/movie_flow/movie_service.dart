@@ -1,9 +1,9 @@
 import 'dart:math';
 
-import 'package:movie_recommendation_app_course/core/failure.dart';
-import 'package:movie_recommendation_app_course/features/movie_flow/genre/genre.dart';
-import 'package:movie_recommendation_app_course/features/movie_flow/movie_repository.dart';
-import 'package:movie_recommendation_app_course/features/movie_flow/result/movie.dart';
+import 'package:movie_recommendation_app/core/failure.dart';
+import 'package:movie_recommendation_app/features/movie_flow/genre/genre.dart';
+import 'package:movie_recommendation_app/features/movie_flow/movie_repository.dart';
+import 'package:movie_recommendation_app/features/movie_flow/result/movie.dart';
 import 'package:multiple_result/multiple_result.dart';
 import 'package:riverpod/riverpod.dart';
 

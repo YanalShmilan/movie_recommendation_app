@@ -1,11 +1,11 @@
 import 'dart:io';
 import 'package:dio/dio.dart';
-import 'package:movie_recommendation_app_course/core/environment_variables.dart';
-import 'package:movie_recommendation_app_course/core/failure.dart';
+import 'package:movie_recommendation_app/core/environment_variables.dart';
+import 'package:movie_recommendation_app/core/failure.dart';
 import 'package:riverpod/riverpod.dart';
-import 'package:movie_recommendation_app_course/features/movie_flow/genre/genre_entity.dart';
-import 'package:movie_recommendation_app_course/features/movie_flow/result/movie_entity.dart';
-import 'package:movie_recommendation_app_course/main.dart';
+import 'package:movie_recommendation_app/features/movie_flow/genre/genre_entity.dart';
+import 'package:movie_recommendation_app/features/movie_flow/result/movie_entity.dart';
+import 'package:movie_recommendation_app/main.dart';
 
 abstract class MovieRepository {
   Future<List<MovieEntity>> getRecommendedMovies(

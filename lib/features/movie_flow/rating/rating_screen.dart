@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:movie_recommendation_app_course/core/constants.dart';
-import 'package:movie_recommendation_app_course/core/widgets/primary_button.dart';
-import 'package:movie_recommendation_app_course/features/movie_flow/movie_flow_controller.dart';
+import 'package:movie_recommendation_app/core/constants.dart';
+import 'package:movie_recommendation_app/core/widgets/primary_button.dart';
+import 'package:movie_recommendation_app/features/movie_flow/movie_flow_controller.dart';
 
 class RatingScreen extends ConsumerWidget {
   const RatingScreen({

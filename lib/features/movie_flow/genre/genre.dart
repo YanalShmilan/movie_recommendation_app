@@ -1,11 +1,11 @@
-
 import 'package:flutter/foundation.dart';
-import 'package:movie_recommendation_app_course/features/movie_flow/genre/genre_entity.dart';
-@immutable 
+import 'package:movie_recommendation_app/features/movie_flow/genre/genre_entity.dart';
+
+@immutable
 class Genre {
-final String name;
-final bool isSelected;
-final int id;
+  final String name;
+  final bool isSelected;
+  final int id;
   const Genre({
     required this.name,
     this.isSelected = false,
@@ -32,22 +32,22 @@ final int id;
     );
   }
 
-  factory Genre.fromEntity(GenreEntity entity){
+  factory Genre.fromEntity(GenreEntity entity) {
     return Genre(
       name: entity.name,
       isSelected: false,
       id: entity.id,
     );
   }
-  
+
   @override
   bool operator ==(Object other) {
     if (identical(this, other)) return true;
-  
+
     return other is Genre &&
-      other.name == name &&
-      other.isSelected == isSelected &&
-      other.id == id;
+        other.name == name &&
+        other.isSelected == isSelected &&
+        other.id == id;
   }
 
   @override
