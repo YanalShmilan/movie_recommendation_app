@@ -16,7 +16,7 @@ void main() {
         overrides: [
           movieRepositoryProvider.overrideWithValue(StubMovieRepository())
         ],
-        child: MyApp(),
+        child: const MyApp(),
       ),
     );
 
@@ -27,7 +27,7 @@ void main() {
     // find the button to go to rating screen without selecting a genre
     await tester.tap(find.byType(PrimaryButton));
 
-    // find the movie title
+    // check that we are still on the genre screen
     expect(find.text('Action'), findsOneWidget);
   });
 
@@ -38,7 +38,7 @@ void main() {
         overrides: [
           movieRepositoryProvider.overrideWithValue(StubMovieRepository())
         ],
-        child: MyApp(),
+        child: const MyApp(),
       ),
     );
 

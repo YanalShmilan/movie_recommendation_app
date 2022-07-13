@@ -21,7 +21,6 @@ final movieRepositoryProvider = Provider<MovieRepository>(
 );
 
 class TMDBMovieRepository implements MovieRepository {
-  @override
   final Dio dio;
 
   TMDBMovieRepository(this.dio);
